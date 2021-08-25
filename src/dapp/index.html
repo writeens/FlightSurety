@@ -1,33 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>FlightSurety</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
 
-<body>
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">FlightSurety</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
-
-    <main class="container">
-
-        <div id="display-wrapper" class="top-20">
-        </div>
-        <div class="row top-20">
-            <label class="form">Flight</label> <input type="text" id="flight-number"> <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
-        </div>
-    </main>
-
-</body>
-
+  <body class="flex items-center flex-col">
+    <p class="text-center text-4xl font-bold text-blue-600 mt-2 mb-6">
+      Flight Surety Platform
+    </p>
+    <div class="flex flex-col w-1/2">
+      <div class="flex justify-between">
+        <p class="mb-2 text-blue-600 font-bold">Operational Status</p>
+        <p class="text-blue-600" id="operational"></p>
+      </div>
+    </div>
+    <div class="flex flex-col w-1/2 mb-4">
+      <p class="mb-2 text-blue-600 font-bold">Account List</p>
+      <select id="allAccounts" class="h-10 mb-4 text-black"></select>
+    </div>
+    <div class="flex flex-col w-1/2 mb-4">
+      <p class="mb-2 text-blue-600 font-bold">List of available airlines</p>
+      <select id="availableAirlines" class="h-10 mb-4 text-black"></select>
+      <button id="registerAirline" class="bg-blue-600 text-white p-2">
+        Register Airline
+      </button>
+      <p class="text-blue-600" id="displayRegisterAirline"></p>
+    </div>
+    <div class="flex flex-col w-1/2 mb-4">
+      <p class="mb-2 text-blue-600 font-bold">Registered Airlines</p>
+      <select id="registeredAirlines" class="h-10 mb-4 text-black"></select>
+    </div>
+    <div class="flex flex-col w-1/2 mb-4">
+      <p class="mb-2 text-blue-600 font-bold">Flight list</p>
+      <select id="flightList" class="h-10 mb-4 text-black"></select>
+      <button id="registerFlight" class="bg-blue-600 text-white p-2">
+        Register Flight
+      </button>
+      <p class="text-blue-600" id="displayRegisterFlight"></p>
+    </div>
+    <div class="flex flex-col w-1/2 mb-4">
+      <p class="mb-2 text-blue-600 font-bold">Registered Flights</p>
+      <select id="registeredFlights" class="h-10 mb-4 text-black"></select>
+      <button id="requestFlightStatusUpdate" class="bg-blue-600 text-white p-2">
+        Request Flight Status
+      </button>
+    </div>
+    <div class="flex flex-col w-1/2 mb-8">
+      <p class="mb-2 text-blue-600 font-bold">Flight Status</p>
+      <p class="text-blue-600" id="statusFlightName"></p>
+      <p class="text-blue-600" id="statusFlightAccount"></p>
+      <p class="text-blue-600" id="statusFlightTimestamp"></p>
+    </div>
+    <div class="flex flex-col w-1/2 mb-4">
+      <p class="mb-2 text-blue-600 font-bold">Passenger List</p>
+      <select id="passengerList" class="h-10 mb-4 text-black"></select>
+      <button id="buyInsurance" class="bg-blue-600 text-white p-2">
+        Buy Insurance
+      </button>
+      <p class="text-blue-600" id="displayInsurance"></p>
+    </div>
+  </body>
 </html>
